@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# архивы больше 100 МБ GitHub не принимает
+*.zip
+
+# локальные файлы
+.claude/
+_pre_unslop/

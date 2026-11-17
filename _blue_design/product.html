@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект — FRIDRIX</title>
+    <meta name="description" content="Кейс из портфолио FRIDRIX.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="Проект — FRIDRIX">
+    <meta property="og:description" content="Кейс из портфолио FRIDRIX.">
+    <meta property="og:image" content="img/mascot.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=20261010">
+</head>
+<body>
+    <header class="site-header" id="top">
+        <div class="wrap header-inner">
+            <a href="index.html" class="logo" aria-label="FRIDRIX — на главную"><span class="logo-mark">F</span>FRIDRIX</a>
+            <nav class="main-nav" aria-label="Основная навигация"><a href="portfolio.html" class="is-active" aria-current="page">Работы</a><a href="services.html">Услуги и цены</a><a href="about.html">Обо мне</a><a href="faq.html">Вопросы</a><a href="contact.html">Контакты</a></nav>
+            <div class="header-cta">
+                <a href="https://t.me/fridrix_order" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.2 2.9 11.3c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.9-1.3-1.5Zm-3.6 3.4-8.7 7.9-.3 3.7-1.6-5 10.2-6.4c.5-.3.9-.1.4.3Z"/></svg>Обсудить проект</a>
+                <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span></button>
+            </div>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <nav aria-label="Мобильная навигация"><a href="index.html">Главная</a><a href="portfolio.html" class="is-active" aria-current="page">Работы</a><a href="services.html">Услуги и цены</a><a href="about.html">Обо мне</a><a href="faq.html">Вопросы</a><a href="contact.html">Контакты</a></nav>
+        <a href="https://t.me/fridrix_order" class="btn btn--primary btn--block" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.2 2.9 11.3c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.9-1.3-1.5Zm-3.6 3.4-8.7 7.9-.3 3.7-1.6-5 10.2-6.4c.5-.3.9-.1.4.3Z"/></svg>Написать в Telegram</a>
+    </div>
+    <main>
+
+    <section class="product-header">
+        <div class="wrap product-header-container">
+            <a href="portfolio.html" class="back-link">← Все работы</a>
+            <div class="product-meta">
+                <span class="product-category-badge" id="productCategory">UX/UI</span>
+                <h1 class="product-title" id="productTitle">Проект</h1>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-hero">
+        <div class="wrap">
+            <div class="product-hero-image" id="productHeroImage"></div>
+            <div class="product-hero-preview" id="productHeroPreview" style="display: none;">
+                <button class="hero-preview-btn" id="heroPreviewPrev" type="button" aria-label="Предыдущее изображение">←</button>
+                <div class="hero-preview-track" id="heroPreviewTrack"></div>
+                <button class="hero-preview-btn" id="heroPreviewNext" type="button" aria-label="Следующее изображение">→</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-content">
+        <div class="wrap product-content-container">
+            <div class="product-info">
+                <div class="product-details">
+                    <div class="detail-item"><span class="detail-label">Клиент</span><span class="detail-value" id="productClient">—</span></div>
+                    <div class="detail-item"><span class="detail-label">Год</span><span class="detail-value" id="productYear">—</span></div>
+                    <div class="detail-item"><span class="detail-label">Роль</span><span class="detail-value" id="productRole">—</span></div>
+                    <div class="detail-item" id="productPriceContainer" style="display: none;"><span class="detail-label">Бюджет проекта</span><span class="detail-value" id="productPrice">—</span></div>
+                    <div class="detail-item" id="productLinkContainer" style="display: none;"><a href="" target="_blank" rel="noopener noreferrer" id="productLink" class="detail-link">Открыть сайт</a></div>
+                </div>
+                <div class="product-description-full">
+                    <h2>О проекте</h2>
+                    <p id="productDescription"></p>
+                    <h2>Задачи</h2>
+                    <ul id="productTasks"></ul>
+                    <h2>Решение</h2>
+                    <p id="productSolution"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-pdf" id="productPdfContainer" style="display: none;">
+        <div class="wrap product-pdf-container">
+            <h2>Материалы проекта</h2>
+            <div class="pdf-list" id="pdfList"></div>
+        </div>
+    </section>
+
+    <section class="product-gallery" id="productGallery">
+        <div class="wrap">
+            <div class="product-gallery-container" id="galleryContainer"></div>
+            <div class="product-slider" id="productSlider" style="display: none;">
+                <div class="slider-container">
+                    <button class="slider-btn slider-prev" id="sliderPrev" type="button" aria-label="Назад">←</button>
+                    <div class="slider-viewport"><div class="slider-track" id="sliderTrack"></div></div>
+                    <button class="slider-btn slider-next" id="sliderNext" type="button" aria-label="Вперёд">→</button>
+                </div>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-cta">
+        <div class="wrap">
+            <div class="product-cta-box">
+                <div>
+                    <h2>Нужен похожий проект?</h2>
+                    <p>Расскажите о задаче — назову сроки и стоимость до начала работы.</p>
+                </div>
+                <div class="btns">
+                    <a href="https://t.me/fridrix_order" class="btn btn--primary" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.2 2.9 11.3c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.9-1.3-1.5Zm-3.6 3.4-8.7 7.9-.3 3.7-1.6-5 10.2-6.4c.5-.3.9-.1.4.3Z"/></svg>Обсудить в Telegram</a>
+                    <a href="services.html" class="btn btn--dark">Услуги и цены</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="next-project">
+        <div class="wrap next-project-container">
+            <a href="portfolio.html" class="next-project-link"><span>Следующий проект</span><span class="case-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+        </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Закрыть">×</button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrev" type="button" aria-label="Предыдущее фото">←</button>
+        <div class="lightbox-content" id="lightboxContent"><img class="lightbox-image" id="lightboxImage" alt=""></div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNext" type="button" aria-label="Следующее фото">→</button>
+    </div>
+    </main>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <a href="index.html" class="logo"><span class="logo-mark">F</span>FRIDRIX</a>
+            <nav class="footer-nav" aria-label="Навигация в подвале"><a href="portfolio.html">Работы</a><a href="services.html">Услуги и цены</a><a href="about.html">Обо мне</a><a href="faq.html">Вопросы</a><a href="contact.html">Контакты</a><a href="https://t.me/fridrix_order" target="_blank" rel="noopener noreferrer">Telegram</a></nav>
+            <p class="footer-copy">© <span data-year>2026</span> FRIDRIX</p>
+        </div>
+    </footer>
+    <a href="https://t.me/fridrix_order" class="btn btn--primary float-cta" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.4 4.2 2.9 11.3c-1.3.5-1.2 1.2-.2 1.5l4.7 1.5 1.8 5.6c.2.6.4.8.8.8.4 0 .6-.2.9-.5l2.3-2.2 4.7 3.5c.9.5 1.5.2 1.7-.8l3.1-14.5c.3-1.3-.5-1.9-1.3-1.5Zm-3.6 3.4-8.7 7.9-.3 3.7-1.6-5 10.2-6.4c.5-.3.9-.1.4.3Z"/></svg>Обсудить проект</a>
+    <script src="product.js?v=20261010"></script>
+    <script src="script.js?v=20261010"></script>
+</body>
+</html>
